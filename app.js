@@ -12,7 +12,8 @@ if(command === 'add'){
   var note = notes.addNotes(argv.title, argv.body);
   if(note !== undefined)
   {
-    console.log('New Note Added' + note.title + ' ' + note.body);
+    console.log('New Note Added');
+    notes.printNotes(note);
   }
   else {
     console.log('Duplicate Note already exists. Please use a different name');
@@ -26,7 +27,8 @@ if(command === 'add'){
   if(note === undefined)
   console.log('Note not found');
   else {
-    console.log('Note Found:' + `${note.title}` + ' ' + `${note.body}`);
+    console.log('Note Found:');
+    notes.printNotes(note);
   }
 }
   else if(command === 'delete'){

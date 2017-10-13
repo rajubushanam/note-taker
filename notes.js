@@ -54,9 +54,15 @@ var deleteNote = (title) => {
   return notes.length !== afterDeletingNotes.length;
 };
 
+var printNotes = (note) => {
+  console.log(`Title: ${note.title}`);
+  console.log(`Body: ${note.body}`);
+}
+
 module.exports = {
   addNotes,
   getAll,
   readNote,
-  deleteNote
+  deleteNote,
+  printNotes
 };
